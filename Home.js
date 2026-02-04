@@ -3,6 +3,7 @@ const minutesElement = document.getElementById("minutes");
 const secondsElement = document.getElementById("seconds");
 const pause = document.getElementById("pauseBtn");
 const schwach = document.getElementById("schwachBtn");
+const kalender = document.getElementById("kalender");
 let totalSeconds = 0;
 let timerInterval;
 
@@ -33,3 +34,7 @@ function pad(val) {
     return val < 10 ? "0" + val : val;
 }
 
+kalender.addEventListener("change", function(){
+    const selectedDate = kalender.value;
+       
+})
