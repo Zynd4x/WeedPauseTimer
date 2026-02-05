@@ -4,6 +4,7 @@ const secondsElement = document.getElementById("seconds");
 const pause = document.getElementById("pauseBtn");
 const schwach = document.getElementById("schwachBtn");
 const kalender = document.getElementById("kalender");
+const timer = document.getElementById("timer");
 let totalSeconds = 0;
 let timerInterval;
 
@@ -35,6 +36,7 @@ function pad(val) {
 }
 
 kalender.addEventListener("change", function(){
-    const selectedDate = kalender.value;
-       
+    let selectedDate = kalender.value;
+    setFullYear(selectedDate);
+    timer.innerHTML = selectedDate
 })
