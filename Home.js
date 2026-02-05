@@ -4,7 +4,6 @@ const secondsElement = document.getElementById("seconds");
 const pause = document.getElementById("pauseBtn");
 const schwach = document.getElementById("schwachBtn");
 const kalender = document.getElementById("kalender");
-const timer = document.getElementById("timer");
 let totalSeconds = 0;
 let timerInterval;
 
@@ -35,8 +34,16 @@ function pad(val) {
     return val < 10 ? "0" + val : val;
 }
 
-kalender.addEventListener("change", function(){
-    let selectedDate = kalender.value;
-    setFullYear(selectedDate);
-    timer.innerHTML = selectedDate
-})
+function dateSubmit() {
+    let date = document.getElementById("kalender").value;
+    const dateEl = document.getElementById("date");
+    if (date) {
+        // input type=date returns YYYY-MM-DD, convert to DD.MM.YYYY
+        const parts = date.split("-");
+        if (parts.length === 3) {
+            const german = `${parts[2]} ${parts[1]} ${parts[0]}`;
+            dateEl.textContent = german;
+        }
+        if (!timerInterval) timerInterval = setInterval(setTime, 1000);
+    }
+}
