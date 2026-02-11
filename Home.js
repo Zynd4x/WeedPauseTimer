@@ -4,6 +4,7 @@ const secondsElement = document.getElementById("seconds");
 const pause = document.getElementById("pauseBtn");
 const schwach = document.getElementById("schwachBtn");
 const kalender = document.getElementById("kalender");
+const dateEl = document.getElementById("date");
 let totalSeconds = 0;
 let timerInterval;
 
@@ -18,6 +19,7 @@ schwach.addEventListener("click", function(){
     clearInterval(timerInterval);
     timerInterval = null;
     totalSeconds = 0;
+    dateEl.textContent = "";
     secondsElement.innerHTML = "00";
     minutesElement.innerHTML = "00";
     hoursElement.innerHTML = "00";
@@ -36,7 +38,6 @@ function pad(val) {
 
 function dateSubmit() {
     let date = document.getElementById("kalender").value;
-    const dateEl = document.getElementById("date");
     if (date) {
         // input type=date returns YYYY-MM-DD, convert to DD.MM.YYYY
         const parts = date.split("-");
