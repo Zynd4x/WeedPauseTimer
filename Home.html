@@ -13,14 +13,17 @@
         <a href="Archivments.html">Archivments</a>
         <a href="Statistik.html">Statistik</a>
     </div>
-    <button onclick="pause()" id="pauseBtn">Pause !</button>
-    <button onclick="schwach()" id="schwachBtn">Schwach geworden..</button>
-    <video src="https://media.pixverse.ai/pixverse%2Fmp4%2Fmedia%2Fweb%2Fori%2F1f9e3d77-ad67-44c0-b47b-80e8433f96f2_seed1152750879.mp4" loop autoplay muted></video>
-    <input type="date" id="kalender"> 
-    <button onclick="dateSubmit()">Datum übernehmen</button>
-    <div class="timer" id="timer">
-        <span id="date"></span> <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+    <div id ="mainContent">
+        <button onclick="pause()" id="pauseBtn">Pause !</button>
+        <button onclick="schwach()" id="schwachBtn">Schwach geworden..</button>
+        <div class="video-wrap">
+            <video id="weedLogo" src="images/bud.webm" loop autoplay muted></video>
+        </div>
+        <input type="date" id="kalender"> 
+        <button onclick="dateSubmit()">Datum übernehmen</button>
+        <div class="timer" id="timer">
+            <span id="date"></span> <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
     </div>
-
     <script src="Home.js"></script>
 </body>
