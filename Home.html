@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Weed Pause Timer</title>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Home.css">
+    <title>Weed Pause Timer</title>
 </head>
 <body>
-    <div id="navi">
-        <a href="Home.html">Home</a>
-        <a href="Info.html">Info</a>
-        <a href="Archivments.html">Archivments</a>
-        <a href="Statistik.html">Statistik</a>
-    </div>
-    <div id ="mainContent">
-        <button onclick="pause()" id="pauseBtn">Pause !</button>
-        <button onclick="schwach()" id="schwachBtn">Schwach geworden..</button>
-        <div class="video-wrap">
-            <video id="weedLogo" src="images/bud.webm" loop autoplay muted></video>
+    <app-nav class="navi" role="navigation" op-menu aria-label="Main Navigation" opnav tabindex="0">
+        <div role="presentation">
+            <ul class="naviSection">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Info.html">Info</a></li>
+                <li><a href="Archivments.html">Archivments</a></li>
+                <li><a href="Statistic.html">Statistic</a></li>
+            </ul>
         </div>
-        <input type="date" id="kalender"> 
-        <button onclick="dateSubmit()">Datum übernehmen</button>
+    </app-nav>
+    <main id ="mainContent">
+        <button onclick="pause()" id="pauseBtn" class="start button">Start pause !</button>
+        <button onclick="schwach()" id="schwachBtn" class="weak button">U got WEAK!</button>
+        <div class="video-wrap">
+            <video class="weedLogo" src="images/bud.mp4" loop autoplay muted></video>
+        </div>
+        <input type="date" id="kalender" class="button"> 
+        <button onclick="dateSubmit()" class="accept button">Accept date</button>
         <div class="timer" id="timer">
             <span id="date"></span> <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
         </div>
-    </div>
+    </main>
     <script src="Home.js"></script>
 </body>
