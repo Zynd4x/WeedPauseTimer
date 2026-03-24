@@ -6,6 +6,7 @@ html, body {
 
 body {
     display: flex;
+    background-color: darkolivegreen;
 }
 
 app-nav {
@@ -13,8 +14,7 @@ app-nav {
     height: 100%;
     width: 200px;
     position: fixed;
-    position: relative;
-    background-color: black;
+    z-index: 1;
     box-shadow: 1px 0px 10px 1px #6BFF7C;
 }
 
@@ -30,20 +30,21 @@ ul {
 }
 
 #mainContent {
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 video {
     position: absolute;
     width: 200px;
-    left: 200px;
+    left: 250px;
     top: 200px;
+
 }
 
 li {
@@ -56,12 +57,19 @@ a {
     font-size: 25px;
 }
 
-#timer {
-    color:whitesmoke;
+.timer {
+    color:black;
+    background-color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding : 20px;
+    border-radius: 5px;
+    cursor: default;
+    margin: 10px;
 }
 
 .button {
-    padding: 20px 20px;
+    padding: 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;

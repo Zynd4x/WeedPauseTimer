@@ -20,16 +20,16 @@ schwach.addEventListener("click", function(){
     timerInterval = null;
     totalSeconds = 0;
     dateEl.textContent = "";
-    secondsElement.innerHTML = "00";
-    minutesElement.innerHTML = "00";
-    hoursElement.innerHTML = "00";
+    secondsElement.innerHTML = " SEC 00";
+    minutesElement.innerHTML = " MIN 00";
+    hoursElement.innerHTML = " H 00";
 })
 
 function setTime() {
     ++totalSeconds;
-    secondsElement.innerHTML = pad(totalSeconds % 60)
-    minutesElement.innerHTML = pad(Math.floor(totalSeconds / 60) % 60)
-    hoursElement.innerHTML = pad(Math.floor(totalSeconds / 3600) % 24)
+    secondsElement.innerHTML = pad(totalSeconds % 60) + " " + "SEC";
+    minutesElement.innerHTML = pad(Math.floor(totalSeconds / 60) % 60) + " " + "MIN";
+    hoursElement.innerHTML = pad(Math.floor(totalSeconds / 3600) % 24) + " " + "H";
 }
 
 function pad(val) {

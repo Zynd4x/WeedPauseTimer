@@ -19,15 +19,15 @@
         </div>
     </app-nav>
     <main id ="mainContent">
+        <div class="video-wrap">
+            <video class="weedLogo" src="images/bud.webm" loop autoplay muted></video>
+        </div>
         <button onclick="pause()" id="pauseBtn" class="start button">Start pause !</button>
         <button onclick="schwach()" id="schwachBtn" class="weak button">U got WEAK!</button>
-        <div class="video-wrap">
-            <video class="weedLogo" src="images/bud.mp4" loop autoplay muted></video>
-        </div>
         <input type="date" id="kalender" class="button"> 
         <button onclick="dateSubmit()" class="accept button">Accept date</button>
-        <div class="timer" id="timer">
-            <span id="date"></span> <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        <div id="timer">
+            <span id="seconds" class="timer">00 SEC</span> <span id="minutes" class="timer">00 MIN</span> <span id="hours" class="timer">00 H</span> <span class="timer">00 D</span> <span class="timer">00 M</span> <span class="timer">00 Y</span> <span id="date"></span> 
         </div>
     </main>
     <script src="Home.js"></script>
